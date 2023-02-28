@@ -162,8 +162,7 @@
     </div>
     <footer class="footer">
         <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022<a
-                    href="https://www.bootstrapdash.com/" target="_blank">Alvin Mutebi</a></span>
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <span id="date_copyright"></span>
 
         </div>
     </footer>
@@ -195,6 +194,12 @@
     <!-- Custom js for this page-->
     <script src="{% static 'assets/js/dashboard.js' %}"></script>
     <script src="{% static 'assets/js/Chart.roundedBarCharts.js' %}"></script>
+
+    <script>
+        var year_copy = new Date().getFullYear()
+        document.getElementById('date_copyright').innerHTML = year_copy
+
+    </script>
 </div>
 
 {% endblock content%}
